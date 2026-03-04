@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Template</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<header id="cs-navigation">
+<div id="sticky-nav-placeholder"></div>
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+        
+            <img src="../../images/logo.png" alt="logo">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="../../index.html" class="cs-li-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="../../about/about.html" class="cs-li-link">
+                            About
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link cs-active">
+                            Our Range
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="../champion/champ.html" class="cs-li-link cs-drop-link">The Champion Series</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="../elite/elite.html" class="cs-li-link cs-drop-link">The Elite Series</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="../goli/goli.html" class="cs-li-link cs-drop-link">The Goliath Series</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="../athena/athena.html" class="cs-li-link cs-drop-link">The Athena Series</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cs-contact-group">
+<img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="100" aria-hidden="true" decoding="async">
+<ul style="list-style-type: none; padding: 0; margin: 0;">
+
+<li>
+            <a href="tel:+91 9465512845" class="cs-phone">
+                
+                +91 9465512845 
+                
+            </a>
+</li>
+<li>
+            <a href="tel:+91 9779031770" class="cs-phone">
+                
+                +91 9779031770 
+                
+            </a>
+</li>
+</ul>
+            <div class="cs-social">
+               <!-- <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>-->
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
+
+
+<section id="hero-229">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            
+            <span class="cs-topper">Behold muggles, the PC with a class of its own!</span>
+            <h1 class="cs-title">The Elite Series</h1>
+            <p class="cs-text">
+While we do specialize in affordable budget PCs who says we can't make an absolute overkill one to knowck youer socks off?
+When the BUDGET is big we deliver with a big bang. Just for the people who cant get enough power, we have something exrta special!
+
+            </p>
+           <!-- <a href="" class="cs-button-solid">Explore More</a>
+            <a href="" class="cs-button-transparent"> 
+                <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg" alt="play icon" width="17" height="17">
+                Learn More
+            </a>-->
+
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="BG.jpg">
+        <source media="(min-width: 601px)" srcset="BG.jpg">
+        <img loading="lazy" decoding="async" src="BG.jpg" alt="mountains" width="2250" height="1500" aria-hidden="true">
+    </picture>
+
+  <div class="container">
+  <div class="gallery">
+    <!-- Mountain Panel -->
+    <label class="panel-container">
+      <div class="panel">
+        <input class="panel-control" type="radio" name="panel-control" checked>
+        <img class="panel-img" src="gaming.jpg" alt="gaming pc">
+        <div class="panel-id">Prime</div>
+        <div class="panel-content">
+          <div class="head">देवगिरि</div>
+          <div class="subhead"></div>
+          <div class="spacer"></div>
+          <div class="body">
+            <div class="range">
+              <div class="title">Range:</div>
+              <div class="value">Mahālangūr Himāl</div>
+            </div>
+            <div class="alt">
+              <div class="title">Elevation:</div>
+              <div class="value">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M256 32c12.5 0 24.1 6.4 30.8 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9H55.9C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5l18.3 24.4c6.4 8.5 19.2 8.5 25.6 0l25.6-34.1c6-8.1 15.5-12.8 25.6-12.8h49z" fill="currentColor"></path>
+                </svg>
+                8849
+              </div>
+            </div>
+            <div class="names">
+              <div class="title">Other Names:</div>
+              <div class="value">
+                <div class="name">- Mount Everest</div>
+                <div class="name">- ཇོ་མོ་གླང་མ</div>
+                <div class="name">- सगरमाथा</div>
+                <div class="name">- 珠穆朗瑪峰</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+
+    <!-- Repeat for other mountains -->
+    <label class="panel-container">
+      <div class="panel">
+        <input class="panel-control" type="radio" name="panel-control" checked>
+        <img class="panel-img" src="Designer.png" alt="देवगिरि">
+        <div class="panel-id">Apex</div>
+        <div class="panel-content">
+          <div class="head">देवगिरि</div>
+          <div class="subhead"></div>
+          <div class="spacer"></div>
+          <div class="body">
+            <div class="range">
+              <div class="title">Range:</div>
+              <div class="value">Mahālangūr Himāl</div>
+            </div>
+            <div class="alt">
+              <div class="title">Elevation:</div>
+              <div class="value">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M256 32c12.5 0 24.1 6.4 30.8 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9H55.9C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5l18.3 24.4c6.4 8.5 19.2 8.5 25.6 0l25.6-34.1c6-8.1 15.5-12.8 25.6-12.8h49z" fill="currentColor"></path>
+                </svg>
+                8849
+              </div>
+            </div>
+            <div class="names">
+              <div class="title">Other Names:</div>
+              <div class="value">
+                <div class="name">- Mount Everest</div>
+                <div class="name">- ཇོ་མོ་གླང་མ</div>
+                <div class="name">- सगरमाथा</div>
+                <div class="name">- 珠穆朗瑪峰</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+    <!-- ... -->
+    <label class="panel-container">
+      <div class="panel">
+        <input class="panel-control" type="radio" name="panel-control" checked>
+        <img class="panel-img" src="https://i.imgur.com/OyK26c7.jpeg" alt="देवगिरि">
+        <div class="panel-id">Edge</div>
+        <div class="panel-content">
+          <div class="head">देवगिरि</div>
+          <div class="subhead"></div>
+          <div class="spacer"></div>
+          <div class="body">
+            <div class="range">
+              <div class="title">Range:</div>
+              <div class="value">Mahālangūr Himāl</div>
+            </div>
+            <div class="alt">
+              <div class="title">Elevation:</div>
+              <div class="value">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M256 32c12.5 0 24.1 6.4 30.8 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9H55.9C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5l18.3 24.4c6.4 8.5 19.2 8.5 25.6 0l25.6-34.1c6-8.1 15.5-12.8 25.6-12.8h49z" fill="currentColor"></path>
+                </svg>
+                8849
+              </div>
+            </div>
+            <div class="names">
+              <div class="title">Other Names:</div>
+              <div class="value">
+                <div class="name">- Mount Everest</div>
+                <div class="name">- ཇོ་མོ་གླང་མ</div>
+                <div class="name">- सगरमाथा</div>
+                <div class="name">- 珠穆朗瑪峰</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+
+    <!-- last mountain -->
+
+    <label class="panel-container">
+      <div class="panel">
+        <input class="panel-control" type="radio" name="panel-control" checked>
+        <img class="panel-img" src="https://i.imgur.com/OyK26c7.jpeg" alt="देवगिरि">
+        <div class="panel-id">Nova</div>
+        <div class="panel-content">
+          <div class="head">देवगिरि</div>
+          <div class="subhead"></div>
+          <div class="spacer"></div>
+          <div class="body">
+            <div class="range">
+              <div class="title">Range:</div>
+              <div class="value">Mahālangūr Himāl</div>
+            </div>
+            <div class="alt">
+              <div class="title">Elevation:</div>
+              <div class="value">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M256 32c12.5 0 24.1 6.4 30.8 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9H55.9C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5l18.3 24.4c6.4 8.5 19.2 8.5 25.6 0l25.6-34.1c6-8.1 15.5-12.8 25.6-12.8h49z" fill="currentColor"></path>
+                </svg>
+                8849
+              </div>
+            </div>
+            <div class="names">
+              <div class="title">Other Names:</div>
+              <div class="value">
+                <div class="name">- Mount Everest</div>
+                <div class="name">- ཇོ་མོ་གླང་མ</div>
+                <div class="name">- सगरमाथा</div>
+                <div class="name">- 珠穆朗瑪峰</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+  </div>
+</section>
+ 
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1292">
+    <div class="cs-container">      
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="../images/logo.png" alt="logo" width="240" height="32">
+            </a>
+            <p class="cs-text">
+                We make your beautiful tech dreams come true.
+            </p>
+            <a href="mailto:junocustompcs@gmail.com" class="cs-link">
+                <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/construction-mail.svg" alt="icon" width="24" height="24">
+                junocustompcs@gmail.com
+            </a>
+        </div>
+        <!-- Links -->
+        <!-- Links -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Our Range</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="../champion/champ.html">Champion Series</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="../elite/elite.html">Elite Series</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="../goli/goli.html">Goliath Series</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="../athena/athena.html">Athena Series</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Rest</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="../../index.html">Home</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="../../about/about.html">About us</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="../../about/about.html">Team</a>
+            </li>
+            
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Contact</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Facebook</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Instagram</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">LinkedIn</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Help</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">FAQ</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Contact us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-copyright">Copyright© 2023. 
+            <a class="cs-copyright-link" href="">Juno Custoom PCs.</a>
+            All Right Reserved.
+        </span>
+        <a href="" class="cs-copyright-link">Terms of Service</a>
+        <a href="" class="cs-copyright-link">Privacy Policy</a>
+    </div>
+    <!--Floating Cirlces-->
+    <div class="cs-floater" aria-hidden="true"></div>
+</footer>
+
+<script src="../../assets/js/navbar.js"></script>
+</body>
+</html>
